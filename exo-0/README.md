@@ -27,3 +27,7 @@ Décommenter la ligne puis recharger la page.
 ```
 
 Que se passe-t-il et pourquoi ?
+
+En décommentant le console.log(myVariable) la console m'affiche 
+"myVariable" n'est pas définit, normal !
+
