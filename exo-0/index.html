@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <h1>Exercice 0</h1>
+
+        <script type="text/javascript">
+
+        /* Section 1 */   
+
+        var name = "Joe"; // je déclare une variable nommée name qui prend pour valeur la chaine de caractère "Joe".
+        var city = 'London'; // je déclare une variable nommée city qui prend pour valeur la chaine de caractère "city".
+        var age = 32; // je déclare une variable nommée age qui prend pour valeur l'entier 32 .
+        var isRed = true; // je déclare une variable nommée isRed qui prend pour valeur un boolean.
+        var isOld = age > 80; // je déclare une variable nommée isOld qui prend pour valeur la variable age supérieur à l'entier 80.
+
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // je déclare une variable nommée previousJobs qui prend pour valeur un tableau.
+
+        // la function prend 2 parametres height et weight avec 3 conditions pour afficher diverts messages dans la console.
+        function info(height, weight) {
+            if (height > 180) {
+                console.log('Vous êtes grand');
+            }
+            if (weight < 0) {
+                console.log('oups, there is a problem');
+            } else if ( weight < 15) {
+                console.log('Are you that slim ?')
+            } else {
+                console.log('Good !')
+            }
+        }
+
+        // Utilisation de la function info() avec 2 valeurs int.
+        info(165, 45);
+
+        // Je déclare 2 variables myHeight & myWeight que je définis avec 2 entiers.
+        var myHeight = 175;
+        var myWeight = 86;
+
+        // J'utilise de nouveau la function info() en passant mes 2 variables myHeight & myWeight.
+        info(myHeight, myWeight);
+
+        // J'utilise de nouveau la function info() en passant mes 2 variables myHeight & myWeight.
+        // J'ajoute une addition + 15 à myHeight et myWeight - 100.
+        info(myHeight + 15, myWeight - 100);
+
+        // J'utilise la function toUpper() avec un parametre "variable" qui
+        // retourne une function toUpperCase() qui convertie une chaine de caractere en majuscules.
+        function toUpper(variable) {
+            return variable.toUpperCase();
+        }
+
+        // Je déclare une variable upperName qui prend ma function toUpper() avec comme parametre
+        // ma variable name = "Joe".
+        var upperName = toUpper(name);
+
+        // J'utilise une boucle for pour pouvoir afficher mes éléments du tableau
+        // qui ce trouve dans la variable previousJobs et je l'affiche dans la console.
+        for (i = 0; i < 3; i = i + 1) {
+            console.log(previousJobs[i]);
+        }
+
+        console.log(upperName);
+        console.log(city);
+        console.log(isRed);
+        console.log(isOld);
+
+        /* Section 2: */
+
+        // afficher la ville dans laquele Joe vit.     
+
+        // afficher si Joe est roux ou pas.
+
+        /* Section 3 */
+
+
+        console.log(myVariable);
+
+        </script>
+
+    </body>
+</html>
