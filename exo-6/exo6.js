@@ -123,4 +123,9 @@ team.players.sort((a, b) => {
 
     return 0;
 });
+
 console.log("Players sorted by last name:", team.players);
+
+team.players.forEach((nom, index) => {
+    console.log(index + 1, nom.firstName);
+})
