@@ -2,7 +2,7 @@
 
 console.log("exo-4");
 
-var secretMessage = [
+let secretMessage = [
   "Learning",
   "isn't",
   "about",
