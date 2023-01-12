@@ -13,9 +13,10 @@ for (let i = 0; i < input.length - 1; i++) {
   console.log(input[i]);
 
   // Vérifie si la lettre courante est une voyelle
-  if (vowels.indexOf(input[i].toLowerCase())) {
+  if (vowels.indexOf(input[i].toLowerCase()) != -1) {
     // Utilise la méthode .push() sur le tableau resultArray pour y ajouter la lettre courante
     resultArray.push(input[i]);
+    console.log(resultArray);
   }
 }
 
