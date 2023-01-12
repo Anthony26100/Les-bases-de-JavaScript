@@ -25,10 +25,17 @@ btn.addEventListener("click", (e) => {
   let sect = document.querySelector(".text");
   let para = document.createElement("p");
   para.textContent = traduction.videoGame;
-  para.textContent = jsonDatas[0].name;
+  for (let i = 0; i < jsonDatas.length; i++) {
+    para.textContent += " / " + jsonDatas[i].description;
+  }
   sect.appendChild(para);
   console.log(para);
   console.log(jsonDatas);
   //ontenu.innerHTML += `Articles :  ${e}`;
   //console.log(contenu);
 });
+
+// btn.addEventListener("click", (e) => {
+//   let contenu = document.querySelector(".contenu");
+//   contenu.textContent = e.target.textContent;
+// });
