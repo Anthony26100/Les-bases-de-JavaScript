@@ -58,7 +58,8 @@ team.addPlayer("toto", "tata", 25);
 console.log(team);
 
 team.addGame("Lyon", 3, 0);
-team.addGame("Lyon", 6, 2);
+team.addGame("Lyon", 6, 5);
+team.addGame("Lyon", 6, 4);
 team.addGame("St-Etienne", 4, 1);
 team.addGame("St-Etienne", 6, 1);
 
@@ -67,13 +68,42 @@ console.log(team);
 // Calcul de la somme des points de l'équipe
 let test = team.games.sort();
 console.log(test);
-let calculPointsTeam = team.games.reduce((accumulator, games) => accumulator + games.teamPoints, 0);
+let a = 0;
+//
+team.games.forEach(game => {
+    if(game.opponent === "Lyon")
+    {
+        a = a + game.teamPoints;
+    }
+});
+console.log(a);
+
+let calculPointsTeam = team.games.reduce((accumulator, games) => 
+{
+    if(games.opponent === "Lyon")
+    {
+        accumulator = accumulator + games.teamPoints;
+    }
+    return accumulator
+}, 0);
 
 console.log(`Total team points: ${calculPointsTeam}`);
 
 // Calculer la moyenne des points de l'équipe adverse
-let calculOponentTeam = team.games.reduce((accumulator, games) => accumulator + games.opponentPoints, 0);
+let calculOponentTeam = team.games.reduce((accumulator, games) => 
+{
+    if(games.opponent === "Lyon")
+    {
+    accumulator = accumulator + games.opponentPoints
+    }
+
+    return accumulator;
+}, 0);
+
+console.log(calculOponentTeam);
+
 let averageOpponentTeam = calculOponentTeam / team.games.length;
+
 console.log(`Average opponent points: ${averageOpponentTeam}`);
 
 // Trouver le joueur le plus âgé
